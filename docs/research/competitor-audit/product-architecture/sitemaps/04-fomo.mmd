@@ -16,6 +16,11 @@ flowchart TD
   D -.-> BUY["Buy Dogecoin → App 下载"]
   HELP --> HS["搜索与分类 → 钱包与账户 / 充值 / 交易等"]
   LOGIN --> OAUTH["Apple 或 Google 认证"]
-  OAUTH -.-> TERMINAL["交易终端 UNVERIFIED"]
+  OAUTH -.-> TERMINAL["签入交易终端 OBS"]
   H --> GUIDE["页脚 社交交易指南 DOC"]
-  TERMINAL -.-> SO["排行榜 / 动态 / 通知，官网介绍，终端 UNVERIFIED"]
+  TERMINAL --> FD["/discover → Tokens / Perps"]
+  TERMINAL --> FT["/tokens/:chain/:address → 图表 / 买卖控件"]
+  FD --> FL["Leaderboard → Traders / Positions"]
+  FD --> FF["Feed / Following / Watchlist"]
+  FD -.-> FT
+  TERMINAL -.-> SO["通知中心 / 通知深链 UNVERIFIED"]

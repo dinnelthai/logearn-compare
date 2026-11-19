@@ -1,5 +1,7 @@
 # DeBot · Desktop Web 产品架构
 
+本页保留原始采样口径。用户提供会话后的新增实测见[五家登录后补验](07-visitor-and-signed-in-coverage.md#登录后补验)。
+
 2026-11-19（曼谷时间）。游客终端顶部 10 个标签。根路由默认选中 AI 信号。
 
 OBS 为实访页面或交互，DOC 为官方资料，INFER 为分析判断，UNVERIFIED 为未验证。本轮样本为 Solana 游客。

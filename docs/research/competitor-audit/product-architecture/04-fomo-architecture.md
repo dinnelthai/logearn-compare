@@ -1,8 +1,14 @@
 # FOMO · Desktop Web 产品架构
 
-2026-11-19（曼谷时间）。游客官网顶部 5 个内容入口。登录后终端一级数量未知。
+本页保留原始采样口径。用户提供会话后的新增实测见[五家登录后补验](07-visitor-and-signed-in-coverage.md#登录后补验)。
+
+2026-11-19（曼谷时间）。游客官网顶部 5 个内容入口。原游客样本无法计数登录终端。补验已见 Discover 主入口和同屏工具，完整一级数量仍未确认。
 
 OBS 为实访页面与操作，DOC 为官网或帮助资料对终端行为的描述，INFER 为推断，UNVERIFIED 为未验证。
+
+## 登录终端补验
+
+**OBS** 使用用户已登录的 Chrome 会话打开了 `/discover` 和 `/tokens/:chain/:address`。Discover 与 Token 详情共享发现侧区控制，可见 Tokens、Perps、Following、Watchlist、Leaderboard 和 Feed。排行榜可打开 Traders / Positions 切换，Feed 可打开侧区，Token 详情可见图表和买卖控件。账号和交易面板中的个人区域已遮盖。通知入口、钱包设置和个人持仓待验。 [Token](screenshots/fs01.jpg) · [排行榜](screenshots/fs03.jpg) · [Discover 与 Feed](screenshots/fs05.jpg)
 
 ## A. 产品架构树
 
@@ -31,7 +37,12 @@ FOMO
 ├── 帮助中心
 │   ├── 分类目录
 │   │   └── 账户钱包、充值提现、交易等
-└── 终端内部 [UNVERIFIED]
+└── 签入终端 [OBS]
+    ├── Discover → Tokens / Perps
+    ├── 侧区 → Following / Watchlist / Leaderboard / Feed
+    │   └── Leaderboard → Traders / Positions
+    ├── Token 详情 → 图表 / 买卖控件
+    └── 通知、个人持仓及账户设置 [UNVERIFIED]
 ```
 
 ## B. Sitemap
@@ -57,9 +68,14 @@ flowchart TD
   D -.-> BUY["Buy Dogecoin → App 下载"]
   HELP --> HS["搜索与分类 → 钱包与账户 / 充值 / 交易等"]
   LOGIN --> OAUTH["Apple 或 Google 认证"]
-  OAUTH -.-> TERMINAL["交易终端 UNVERIFIED"]
+  OAUTH -.-> TERMINAL["签入交易终端 OBS"]
   H --> GUIDE["页脚 社交交易指南 DOC"]
-  TERMINAL -.-> SO["排行榜 / 动态 / 通知，官网介绍，终端 UNVERIFIED"]
+  TERMINAL --> FD["/discover → Tokens / Perps"]
+  TERMINAL --> FT["/tokens/:chain/:address → 图表 / 买卖控件"]
+  FD --> FL["Leaderboard → Traders / Positions"]
+  FD --> FF["Feed / Following / Watchlist"]
+  FD -.-> FT
+  TERMINAL -.-> SO["通知中心 / 通知深链 UNVERIFIED"]
 ```
 
 ## C. 导航分析
