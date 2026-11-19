@@ -11,18 +11,19 @@
 
 下表中，OBS 指实际看到的界面或走过的路径，DOC 指官方描述，未验证代表缺少证据。一级数只统计当时主导航，排除 Logo、搜索、链切换、认证和工具按钮。FOMO 的官网数量与三家终端数量不可直接比较。打开目标路由与访问目标数据分开记录。无同身份、同任务的计时测试。
 
-## 功能和信息组织
+## 统一分类与层级
 
-| 维度 | Axiom | DeBot | GMGN | FOMO |
-| --- | --- | --- | --- | --- |
-| 主架构 | 官网与统一交易终端。已登录终端 7 项 [截图](screenshots/a07.jpg) | AI 信号为默认现货看板，顶部 10 项。合约新标签另有 6 项 [现货](screenshots/d20.jpg) · [合约](screenshots/d21.jpg) | 战壕首页，顶部 10 项，含 1 个外链。AI、自选放工具区 [截图](screenshots/g18.jpg) | 官网 5 个内容入口。签入终端未知 [截图](screenshots/f01.jpg) |
-| 发现与榜单 | 探索收纳热门、趋势、雷达、喊单、主播。Pulse 独立盯盘 [截图](screenshots/a07.jpg) | AI 信号、战壕、行情平行。行情混合榜单、主题和平台 [截图](screenshots/d02.jpg) | 战壕与热门分开，热门下有新币、精选、蓝筹等 [截图](screenshots/g06.jpg) | 公开总览 → 市值、涨跌、新币和 Meme 分类 [截图](screenshots/f09.jpg) |
-| Token 详情及交易 | 榜单打开图表、活动、持有者入口和交易区 [截图](screenshots/a08.jpg) | 详情聚合图表、活动、持仓分析入口与买卖。游客持仓分析遇认证 [截图](screenshots/d05.jpg) | 详情聚合活动、Holder、交易者、开发者和买卖区 [截图](screenshots/g07.jpg) | 价格和币种信息公开。DOGE 页面 Buy CTA 打开 App 下载 [截图](screenshots/f07.jpg) |
-| 钱包与跟踪 | 监控内有钱包动态、筛选、扫描入口。建立跟踪未验证 [截图](screenshots/a11.jpg) | 监控管理页把钱包表、筛选、TG 与提醒配置放在一起。游客为空表 [截图](screenshots/d22.jpg) | Holder 可开钱包新标签，目标要求登录。监控、追踪和跟单各自一级 [钱包边界](screenshots/g08.jpg) · [追踪](screenshots/g12.jpg) | 帮助中心有钱包与账户分类。终端入口未知 [截图](screenshots/f08.jpg) |
-| 自动执行 / AI | 永续与预测独立。AI 策略工作台未验证 [截图](screenshots/a12.jpg) | AI 信号是发现入口。跟单有任务/记录导航，Token 页有自动页签 [跟单](screenshots/d10.jpg) · [详情](screenshots/d04.jpg) | 跟单含牛人榜、钱包跟单与狙击，钱包跟单需私钥账号。AI / OpenAPI 独立 [跟单](screenshots/g24.jpg) · [AI](screenshots/g16.jpg) | 公开永续介绍及 CTA。签入执行界面未验证 [截图](screenshots/f18.jpg) |
-| 社交及通知 | 探索收纳喊单和主播。账号菜单可打开通知，深链未知 [主播](screenshots/a06.jpg) · [通知](screenshots/a16.jpg) | 喊单卡片到 Token，样本作者外跳 Pump.fun。监控有提醒控件 [喊单](screenshots/d17.jpg) · [详情](screenshots/d25.jpg) | X 喊单到 Token，作者目标需要登录。独立通知中心未验证 [喊单](screenshots/g19.jpg) · [作者](screenshots/g25.jpg) | 官网指南介绍动态、排行榜、通知（DOC），终端跳转未知 [截图](screenshots/f17.jpg) |
-| 持仓、账户与帮助 | 投资组合内分现货、钱包、永续、预测和对比。用户有设置和通知。Docs 可达 [投资组合](screenshots/a14.jpg) · [文档](screenshots/a17.jpg) | 现货资产、自选和奖励遇认证。底栏设有布局和吸附 [资产](screenshots/d16.jpg) · [布局](screenshots/d27.jpg) | 资产和收藏游客遇认证。永续个人仓位提示连接钱包 [自选](screenshots/g21.jpg) · [合约](screenshots/g20.jpg) | 官网与永续 CTA 打开 Apple/Google 弹窗。公开帮助有独立文章搜索 [认证](screenshots/f18.jpg) · [帮助](screenshots/f08.jpg) |
-| 搜索、上下文和重复入口 | 搜索限代币/合约占位，投资组合另有钱包搜索。底栏复用探索/Pulse/监控 [探索](screenshots/a07.jpg) · [投资组合](screenshots/a14.jpg) | 搜索弹层接受代币/钱包输入，结果未确认。底栏和顶部重复支持快捷操作 [搜索](screenshots/d24.jpg) · [布局](screenshots/d27.jpg) | 输入 IRYS 返回同名标的。钱包用新标签保留来源，过滤恢复未测试 [搜索](screenshots/g23.jpg) · [钱包](screenshots/g08.jpg) | 市场分类与面包屑可回上层，未见官网全局 Token/钱包搜索 [截图](screenshots/f05.jpg) |
+**分类标准**以用户任务为轴。以下四种层级独立于功能类别，一个类别可以对应多个层级。L1 是主导航目的地，L2 是页面内部的分类、页签或功能分区，OBJ 是以 Token、钱包或人物为主键的详情，GLOBAL 是跨页面搜索、快捷浮层、账户和帮助入口。公开站以「公开」标注，权限未知记为 **UNVERIFIED**。可见入口和成功操作分别说明。**OBS** 是实际验证，**DOC** 是官方资料，**INFER** 是据此推断。单元格同时涉及受限页面时，OBS 仅覆盖实见入口与反馈。
+
+| 统一类别 | Axiom | DeBot | GMGN | FOMO 公开站 | FOMO 交易终端 |
+| --- | --- | --- | --- | --- | --- |
+| 发现与行情 | OBS · L1 探索、Pulse；L2 热门、趋势、雷达及生命周期列 [证据](screenshots/a07.jpg) | OBS · L1 AI 信号、战壕、行情；L2 热门、趋势、新币、主题 [证据](screenshots/d02.jpg) | OBS · L1 战壕、热门；L2 精选、新币、蓝筹、热搜 [证据](screenshots/g06.jpg) | OBS · L1 加密货币、Meme；L2 市值、涨跌、新币 [证据](screenshots/f09.jpg) | UNVERIFIED · 登录后发现首页及层级 |
+| 代币分析与现货 | OBS · OBJ Token；L2 图表、活动、持有者入口与买卖面板 [证据](screenshots/a08.jpg) | OBS · OBJ Token；L2 活动、分析与买卖。持仓分析遇登录 [证据](screenshots/d05.jpg) | OBS · OBJ Token；L2 活动、持有人与买卖区 [证据](screenshots/g07.jpg) | OBS · OBJ 价格详情；L2 市场统计、相似币、App 下载弹窗 [证据](screenshots/f07.jpg) | UNVERIFIED · 下单、Holder 及详情布局 |
+| 钱包研究与监控 | OBS · L1 监控；L2 钱包动态和扫描入口。扫描结果未验证 [证据](screenshots/a11.jpg) | OBS · L1 监控；L2 动向、管理、备注及提醒配置。钱包详情未知 [证据](screenshots/d22.jpg) | OBS · L1 监控、追踪；L2 钱包/社媒；OBJ 钱包路由遇登录 [证据](screenshots/g08.jpg) · [追踪](screenshots/g12.jpg) | OBS · GLOBAL 帮助中心有钱包与账户栏目 [证据](screenshots/f08.jpg) | UNVERIFIED · 钱包研究、个人钱包与追踪入口 |
+| 衍生品与自动执行 | OBS · L1 永续、预测；L2 盘口、订单面板及事件列表。独立 AI 策略未验证 [永续](screenshots/a12.jpg) · [预测](screenshots/a13.jpg) | OBS · L1 合约及跟单；合约开新标签。L2 订单表、历史与跟单记录 [合约](screenshots/d21.jpg) · [跟单](screenshots/d10.jpg) | OBS · L1 合约、跟单；L2 永续仓位、钱包跟单与狙击。GLOBAL AI/OpenAPI [合约](screenshots/g20.jpg) · [跟单](screenshots/g24.jpg) · [AI](screenshots/g16.jpg) | OBS · L1 永续介绍；CTA 打开认证 [证据](screenshots/f18.jpg) | DOC · 官网描述网页永续订单管理与持仓。实际终端层级未验证 [证据](screenshots/f14.jpg) |
+| 社交与通知 | OBS · L2 探索内喊单、主播；GLOBAL 用户菜单通知。通知深链未验证 [主播](screenshots/a06.jpg) · [通知](screenshots/a16.jpg) | OBS · L1 喊单；OBJ 卡片到 Token，作者外链；L2 监控提醒。独立通知中心未验证 [喊单](screenshots/d17.jpg) · [提醒](screenshots/d22.jpg) | OBS · L1 喊单；OBJ 卡片到 Token，作者目标遇登录 [喊单](screenshots/g19.jpg) · [作者](screenshots/g25.jpg) | OBS · GLOBAL 页脚社交指南 [证据](screenshots/f17.jpg) | DOC · 动态、排行榜、通知。导航位置、深链和作者页未验证 [证据](screenshots/f17.jpg) |
+| 自有资产与账户 | OBS · L1 投资组合、奖励；L2 现货、钱包等；GLOBAL 设置入口 [资产](screenshots/a14.jpg) · [账户](screenshots/a15.jpg) | OBS · L1 资产、奖励；GLOBAL 登录。游客遇认证 [资产](screenshots/d16.jpg) · [登录](screenshots/d19.jpg) | OBS · L1 资产、奖励；GLOBAL 登录和收藏。游客资产遇认证 [资产](screenshots/g13.jpg) · [收藏](screenshots/g21.jpg) | OBS · GLOBAL Apple/Google 认证、帮助 [认证](screenshots/f03.jpg) · [帮助](screenshots/f08.jpg) | UNVERIFIED · 资产、持仓、钱包管理、设置和身份权限 |
+| 全局查找与工作台 | OBS · GLOBAL 代币/合约搜索、底部快捷工具 [证据](screenshots/a07.jpg) | OBS · GLOBAL 代币/钱包搜索弹层与底栏布局。搜索结果和配置持久化未验证 [搜索](screenshots/d24.jpg) · [布局](screenshots/d27.jpg) | OBS · GLOBAL 搜索弹层返回同名币，钱包/KOL 查询结果未验证 [证据](screenshots/g23.jpg) | OBS · GLOBAL 帮助文章搜索；公开首页未见 Token/钱包全局搜索 [证据](screenshots/f08.jpg) | UNVERIFIED · 全局搜索、快捷工具和工作台设置 |
 
 ## 可以作出的判断
 
